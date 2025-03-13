@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 15:35:33 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/13 17:25:30 by oishchen         ###   ########.fr       */
+/*   Created: 2025/03/13 17:09:12 by oishchen          #+#    #+#             */
+/*   Updated: 2025/03/13 17:25:46 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*word;
+	int		len_s1;
+	int		len_s2;
+	char	*strjoin;
 
-	word = (char *)malloc(sizeof(char *) * (len + 1));
-	if (!word)
-		return (NULL);
-	ft_strlcpy(word, s + start, len + 1);
-	return (word);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	strjoin = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (!strjoin || (len_s1 == 0 && len_s2 == 0))
+		return ((void *)0);
+	ft_strlcpy(strjoin, s1, len_s1 + 1);
+	ft_strlcpy(strjoin + len_s1, s2, len_s2 + 1);
+	return (strjoin);
 }
