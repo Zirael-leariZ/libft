@@ -9,7 +9,7 @@ SRCS=ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 	ft_strchr.c ft_strrchr.c ft_bzero.c ft_memchr.c ft_memcpy.c \
 	ft_memmove.c ft_memcpy.c ft_strlcpy.c ft_atoi.c ft_strlcat.c \
 	ft_strdup.c ft_calloc.c ft_substr.c ft_strjoin.c ft_split.c \
-	ft_strtrim.c
+	ft_strtrim.c ft_itoa.c
 
 OBJS=$(SRCS:.c=.o)
 
