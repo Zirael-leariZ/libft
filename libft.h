@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 19:00:08 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/14 11:00:35 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/14 18:34:23 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *str, char sep);
+char	*ft_strtrim(char const *s1, char const *set);
 #endif
