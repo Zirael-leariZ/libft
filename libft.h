@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 19:00:08 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/14 19:29:27 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/21 23:34:15 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *str, char sep);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif

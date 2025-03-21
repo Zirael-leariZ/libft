@@ -1,63 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/14 18:53:51 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/21 22:58:46 by oishchen         ###   ########.fr       */
+/*   Created: 2025/03/21 23:05:42 by oishchen          #+#    #+#             */
+/*   Updated: 2025/03/21 23:26:05 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	n_size(int n)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int			len;
-	long long	a;
+	int		i;
+	char	*res;
 
-	len = 1;
-	a = n;
-	if (a < 0)
-	{
-		len++;
-		a = a * (-1);
-	}
-	while (a >= 10)
-	{
-		a /= 10;
-		len++;
-	}
-	return (len);
-}
-
-char	*ft_itoa(int n)
-{
-	int			size;
-	char		*res;
-	long long	a;
-
-	a = n;
-	size = n_size((int)n);
-	res = (char *)malloc((size + 1) * sizeof(char));
+	if (!s || !f)
+		return (NULL);
+	res = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
-	if (a < 0)
+	i = 0;
+	while (s[i])
 	{
-		res[0] = '-';
-		a *= -1;
+		res[i] = f(i, s[i]);
+		i++;
 	}
-	else if (a == 0)
-		res[0] = '0';
-	res[size] = '\0';
-	size--;
-	while (a != 0)
-	{
-		res[size] = (a % 10) + '0';
-		a /= 10;
-		size--;
-	}
+	res[i] = '\0';
 	return (res);
 }
