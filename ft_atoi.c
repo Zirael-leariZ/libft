@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 21:29:14 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/21 21:01:28 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/22 00:36:13 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-
