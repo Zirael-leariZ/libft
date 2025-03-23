@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 13:26:08 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/13 15:02:30 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:41:29 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strdup(const char *s1)
 	int		i;
 	char	*dup;
 
-	if (!s1)
-		return (NULL);
 	i = 0;
 	while (s1[i])
 		i++;

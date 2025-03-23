@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 09:49:34 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/13 13:15:21 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:57:41 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	*ft_memcpy(void *to, const void *from, size_t len)
 {
-	char		*ptr;
-	char		*src_cpy;
+	unsigned char	*ptr;
+	unsigned char	*src_cpy;
 
-	ptr = (char *)to;
-	src_cpy = (char *)from;
-	while (len--)
+	ptr = (unsigned char *)to;
+	src_cpy = (unsigned char *)from;
+	while (len > 0)
 	{
 		*ptr++ = *src_cpy++;
+		len --;
 	}
 	return (to);
 }

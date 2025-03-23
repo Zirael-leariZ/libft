@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 11:18:36 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/14 11:54:29 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/22 16:02:53 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	**ft_split(char const *str, char sep)
 
 	word_num = ft_count_words(str, sep);
 	result = (char **)malloc((word_num + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
 	str_pos = 0;
 	split_pos = 0;
 	while (str[str_pos])
@@ -64,8 +66,7 @@ char	**ft_split(char const *str, char sep)
 		if (str[str_pos])
 		{
 			next_len = nword_len((str + str_pos), sep);
-			result[split_pos] = ft_substr(str, str_pos, next_len);
-			split_pos++;
+			result[split_pos++] = ft_substr(str, str_pos, next_len);
 			str_pos += next_len;
 		}
 	}

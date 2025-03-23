@@ -6,20 +6,25 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:47:08 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/12 12:03:20 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/23 11:32:56 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//return the pointer with the first occurance 
+#include "libft.h"
+#include <stdlib.h>
+
 char	*ft_strchr(const char *s, int c)
 {
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == uc)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (uc == '\0')
 		return ((char *)s);
 	return ((void *)0);
 }

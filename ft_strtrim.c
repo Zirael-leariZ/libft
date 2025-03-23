@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 14:45:44 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/14 18:35:06 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/22 15:57:39 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		fin--;
 	fin++;
 	res = (char *)malloc((fin - strt + 1) * sizeof(char));
+	if (!res)
+		return (NULL);
 	ft_strlcpy(res, s1 + strt, fin - strt + 1);
 	return (res);
 }
