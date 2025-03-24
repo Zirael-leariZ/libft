@@ -6,13 +6,11 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 19:41:01 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/11 19:57:38 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:22:36 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (!(c >= 48 && c <= 57))
-		return (0);
-	return (1);
+	return (c >= '0' && c <= '9');
 }

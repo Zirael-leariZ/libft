@@ -6,13 +6,11 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 20:35:54 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/11 18:58:06 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:22:55 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c < 0 || c > 127)
-		return (0);
-	return (1);
+	return (c >= 0 && c <= 127);
 }

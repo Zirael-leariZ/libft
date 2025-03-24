@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 00:22:31 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/22 16:20:02 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:16:45 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	current_n;
 
-	if (n >= 2147483647)
-	{
-		write(fd, "2147483647", 10);
-		return ;
-	}
-	else if (n <= -2147483648)
+	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
 		return ;

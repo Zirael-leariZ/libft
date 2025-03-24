@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 18:53:51 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/21 22:58:46 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/24 10:25:49 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	long long	a;
 
 	a = n;
-	size = n_size((int)n);
+	size = n_size(n);
 	res = (char *)malloc((size + 1) * sizeof(char));
 	if (!res)
 		return (NULL);

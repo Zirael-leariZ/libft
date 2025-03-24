@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 15:16:47 by oishchen          #+#    #+#             */
-/*   Updated: 2025/03/23 11:50:25 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/03/23 20:32:13 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (size == 0 || count == 0)
 	{
-		res = malloc(1);
+		res = malloc(0);
 		if (!res)
 			return (NULL);
 		return (res);
